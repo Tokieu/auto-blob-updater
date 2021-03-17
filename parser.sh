@@ -3,12 +3,12 @@
 # CI Runner Script for Generation of blobs
 #
 
-setup_makefiles="/mnt/compile3/derpfest/device/xiaomi/ginkgo/setup-makefiles.sh"
-extract_files="/mnt/compile3/derpfest/device/xiaomi/ginkgo/extract-files.sh"
+setup_makefiles="/mnt/d/pixel/device/xiaomi/ginkgo/setup-makefiles.sh"
+extract_files="/mnt/d/pixel/device/xiaomi/ginkgo/extract-files.sh"
 
 website_curl()
 {
-    wget https://github.com/XiaomiFirmwareUpdater/miui-updates-tracker/tree/master/stable_recovery -O page.htm
+    wget https://github.com/Tokieu/miui-updates-tracker -O page.htm
 }
 
 function count_links()
@@ -31,7 +31,7 @@ function select_link()
 
 function yaml_load()
 {
-    local raw_file="https://raw.githubusercontent.com/XiaomiFirmwareUpdater/miui-updates-tracker/master/stable_recovery/$yaml_file"
+    local raw_file=" wget https://github.com/Tokieu/miui-updates-tracker/$yaml_file"
     wget $raw_file 	
     yaml_parser
 }
