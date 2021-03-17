@@ -8,7 +8,7 @@ extract_files="/mnt/d/pixel/device/xiaomi/ginkgo/extract-files.sh"
 
 website_curl()
 {
-    wget https://github.com/Tokieu/miui-updates-tracker -O page.htm
+    wget https://github.com/Tokieu/miui-updates-tracker/tree/main -O page.htm
 }
 
 function count_links()
@@ -31,7 +31,7 @@ function select_link()
 
 function yaml_load()
 {
-    local raw_file=" wget https://github.com/Tokieu/miui-updates-tracker/$yaml_file"
+    local raw_file=" wget https://github.com/Tokieu/miui-updates-tracker/blob/main/$yaml_file"
     wget $raw_file 	
     yaml_parser
 }
